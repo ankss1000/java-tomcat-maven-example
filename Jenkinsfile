@@ -21,7 +21,7 @@ node{
    
       stage('Publish Docker Image'){
          withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerPWD')]) {
-              sh "docker login -u ankss1000 -p ${@nkit100986}"
+              sh "docker login -u ankss1000 -p ${dockerPWDankss1000}"
          }
         sh 'docker push ankss1000/javatomcatreliancedemo:2.0.0'
       }
